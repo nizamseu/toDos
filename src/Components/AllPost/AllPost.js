@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useHistory, useParams } from "react-router";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Comment from "../Comment/Comment";
+import { Typography } from "@mui/material";
+import Button from "@mui/material/Button";
 const AllPost = () => {
+  const history = useHistory();
   const { postId } = useParams();
   const [post, setPost] = useState([]);
   const [comment, setComment] = useState([]);
@@ -35,7 +38,17 @@ const AllPost = () => {
           },
         }}
       >
-        <h4 className="mb-0">Post</h4>
+        <h1 className="text-center">Post</h1>
+        <Box>
+          <Typography variant="h6">
+            <Button className="m-2" variant="contained" color="error" onClick={() => history.goBack()}>
+              Back
+            </Button>
+            <Button variant="contained" color="error" onClick={() => history.push("/")}>
+              Home
+            </Button>
+          </Typography>
+        </Box>
         <Paper elevation={3}>
           <h3>{postBody?.title}</h3>
           <p>{postBody?.body}</p>
