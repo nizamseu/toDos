@@ -18,14 +18,14 @@ const Header = () => {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              News
+              To Do
             </Typography>
             <Typography>
               <Link className="menu" to={"/home"}>
                 Home
               </Link>
-              <Link className="menu" to={"/about"}>
-                About
+              <Link className="menu" to={"/post"}>
+                Post
               </Link>
               <Link className="menu" to={"/contract"}>
                 ContractUs

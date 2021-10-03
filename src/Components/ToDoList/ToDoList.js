@@ -5,8 +5,11 @@ import { useHistory } from "react-router";
 const ToDoList = (props) => {
   const histrory = useHistory();
   const { name, id, username, email } = props.toDo;
-  const handleDetails = () => {
+  const handleToDo = () => {
     histrory.push(`/details/${id}`);
+  };
+  const handlePost = () => {
+    histrory.push(`/post/${id}`);
   };
   return (
     <tr className="fs-5">
@@ -15,7 +18,12 @@ const ToDoList = (props) => {
       <td>{email}</td>
       <td>@{username.toLowerCase()}</td>
       <td>
-        <Button onClick={handleDetails} variant="primary">
+        <Button onClick={handleToDo} variant="primary">
+          View
+        </Button>
+      </td>
+      <td>
+        <Button onClick={handlePost} variant="primary">
           View
         </Button>
       </td>

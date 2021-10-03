@@ -4,6 +4,8 @@ import Home from "./Components/Home/Home";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Details from "./Components/Details/Details";
+import Post from "./Components/Post/Post";
+import AllPost from "./Components/AllPost/AllPost";
 function App() {
   return (
     <div>
@@ -15,6 +17,12 @@ function App() {
           </Route>
           <Route path="/details/:userId">
             <Details></Details>
+          </Route>
+          <Route path="/post/:userId">
+            <Post></Post>
+          </Route>
+          <Route path="/comment/:postId">
+            <AllPost></AllPost>
           </Route>
           <Route exact path="/">
             <Home></Home>

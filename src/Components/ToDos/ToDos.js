@@ -22,7 +22,8 @@ const ToDos = () => {
             <th>Name</th>
             <th>Email</th>
             <th>User Name</th>
-            <th>Details</th>
+            <th>To Do</th>
+            <th>Post</th>
           </tr>
         </thead>
         <tbody>
